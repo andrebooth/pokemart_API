@@ -9,7 +9,7 @@ class Pokemart(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=5000)
 #price will equal the digit value of the item cost for store
-    price = models.IntegerField('')
+    price = models.IntegerField()
 
 #I will now create a database table from this info, I will create another migration
 #I made a migration - the migrations describe the change to the data structure but doesnt apply to the database 
@@ -18,6 +18,6 @@ class Pokemart(models.Model):
 
 
 #changing the drink object model to be a string instead of object 1 object 2 etc
-
+#need to make sure the indentation is right or it wont be part of the class/function
     def __str__(self):
         return self.name + " " + self.description
