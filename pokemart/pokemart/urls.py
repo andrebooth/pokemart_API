@@ -16,8 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
+    # url path for admin
     path('admin/', admin.site.urls),
-    path('pokemart_list/', views.pokemart_list)
+    # url path to get all the list items in pokemart
+    path('pokemart_list/', views.pokemart_list),
+    # url path to get individual item by id
+    path('pokemart_list/<int:id>', views.pokemart_list_detail)
 ]
+
+#converting the browser data to json
+#need to import format suffix patterns from rest framework url patterns 
+urlpatterns = format_suffix_patterns(urlpatterns)
