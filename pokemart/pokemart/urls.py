@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pokemart_items/', views.pokemart_list)
+    path('pokemart_list/', views.pokemart_list)
 ]
