@@ -11,4 +11,4 @@ class PokemartSerialzer(serializers.ModelSerializer):
 #need to have an inner class Meta - Meta data describing the model
     class Meta:
         model = Pokemart
-        fields = ['id', 'name', 'description', 'price']
+        fields = ['id', 'name', 'description', 'price', 'image']

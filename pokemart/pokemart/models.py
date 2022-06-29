@@ -1,4 +1,5 @@
 #need to inhereit from a model class (line 2)
+from email.mime import image
 from django.db import models
 
 
@@ -10,6 +11,8 @@ class Pokemart(models.Model):
     description = models.CharField(max_length=5000)
 #price will equal the digit value of the item cost for store
     price = models.IntegerField()
+#able to upload a photo of an item
+    image = models.ImageField(upload_to='uploads/items')
 
 #I will now create a database table from this info, I will create another migration
 #I made a migration - the migrations describe the change to the data structure but doesnt apply to the database 
