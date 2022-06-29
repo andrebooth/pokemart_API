@@ -1,5 +1,6 @@
-# consuming the api through the frontent
-#need help with this
+#a request to python to consuming the api through the frontent
+#need to import request (install requests) - module to make simple requests to pages on the internet 
+
 
 import requests
 
